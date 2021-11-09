@@ -8,7 +8,7 @@ function App() {
   const [question, setQuestion] = useState(null);
 
   const getQuestion = async () => {
-    const response = await fetch(`http://jservice.io/api/random`);
+    const response = await fetch(`https://jservice.io/api/random`);
     const data = await response.json();
     setQuestion(data);
   };
