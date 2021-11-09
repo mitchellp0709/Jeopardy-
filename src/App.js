@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Game from "./components/Game";
+import { useReducer, useState } from "react";
+import Question from "./components/Question";
+import ShowQuestion from "./components/ShowQuestion";
 
 function App() {
+  const [question, setQuestion] = useState(null);
+
+  const getQuestion = async () => {
+    const response = await fetch(`http://jservice.io/api/random`);
+    const data = await response.json();
+    setQuestion(data);
+  };
+
+  const [qDis, setqDis] = useState("block");
+  const [aDis, setaDis] = useState("none");
+
+  const showAnswer = () => {
+    setqDis("none");
+    setaDis("block");
+  };
+
+  const hideAnswer = () => {
+    setqDis("block");
+    setaDis("none");
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Game question={question} />
+      <Question getQuestion={getQuestion} hideAnswer={hideAnswer} />
+      <ShowQuestion
+        question={question}
+        qDis={qDis}
+        aDis={aDis}
+        showAnswer={showAnswer}
+        getQuestion={getQuestion}
+        hideAnswer={hideAnswer}
+      />
     </div>
   );
 }

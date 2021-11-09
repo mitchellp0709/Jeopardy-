@@ -11,3 +11,81 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+body{
+  background-image: url("https://www.liveabout.com/thmb/tmL7B7IaqERxi2QihuV5LslsD5c=/1080x1080/smart/filters:no_upscale()/jeop_logo_large-58bacf375f9b58af5cb69e2f.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+/* Game Styling */
+
+h1{
+  color: white;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+h2{
+  color:rgb(158, 222, 155);
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+button{
+  margin:10px;
+  background-color:rgb(230, 55, 55);
+ outline: 3px solid rgb(158, 222, 155);
+ color:white;
+ transition: .2s ease-in-out;
+ width:100px;
+ height:60px;
+ font-size: 1.15em;
+ font-weight: bold;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: rgb(158, 222, 155);
+  outline: 3px solid rgb(230, 55, 55);
+  color: black
+}
+
+
+/* Question and Answer */
+
+
+.click{
+  background-color: rgb(206, 93, 93);
+  height: 50px;
+  margin:auto;
+  margin-top: 20px;
+  font-size: 2em;
+  color:white;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+
+}
+.category, .points{
+  color:rgb(158, 222, 155);
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: rgb(206, 93, 93);
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  padding:5px;
+}
+
+.question, .answer{
+  background-color: rgb(158, 222, 155);
+  font-size: 1.75em;
+  color:rgb(206, 93, 93);
+  font-weight: bold;
+  padding:5px;
+  min-height: 40px;
+}
+.question:hover{
+  cursor: pointer;
+  background-color: rgb(0, 0, 0,.8);
+}
+.answer:hover{
+  cursor: pointer;
+  background-color: rgb(0, 0, 0,.8);
+}
